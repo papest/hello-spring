@@ -1,4 +1,4 @@
-package ru.papest.hellospring;
+package ru.papest.hellospring.prototypes;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
+import ru.papest.hellospring.Config;
 
 import java.util.stream.IntStream;
 

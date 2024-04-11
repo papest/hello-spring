@@ -9,10 +9,15 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Scope("prototype")
 public class ClassPrototype {
     static AtomicInteger number = new AtomicInteger(0);
-    int intNumber;
+    final int intNumber;
 
     ClassPrototype() {
         intNumber = number.incrementAndGet();
         System.out.printf("Hello, ClassPrototype %s instantiation!\n", intNumber);
+    }
+
+    @Override
+    public String toString() {
+        return "ClassPrototype " + intNumber;
     }
 }

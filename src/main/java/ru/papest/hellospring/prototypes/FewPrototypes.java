@@ -13,6 +13,10 @@ import java.util.stream.IntStream;
 
 @Component
 public class FewPrototypes {
+    {
+        System.out.println("Hello, I'm FewPrototypes!");
+    }
+
     FewPrototypes(@Autowired ApplicationContext context, @Autowired PrototypeService service) {
         int few = 4;
         var anotherContext = new AnnotationConfigApplicationContext(Config.class);

@@ -1,5 +1,6 @@
 package ru.papest.hellospring.prototypes;
 
+import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
@@ -33,6 +34,16 @@ public class AutowiredFields {
         System.out.printf("Hello,%s !\n", collectionClassPrototypeService);
         list.forEach(i -> System.out.printf("Hello, %s !\n", i));
         return this;
+    }
+
+    @PostConstruct
+    void helloFromPostConstruct() {
+        System.out.printf("Hello,%s from AutowiredFields PostConstruct!\n", classPrototype);
+        System.out.printf("Hello,%s from AutowiredFields PostConstruct!\n", prototypeService);
+        System.out.printf("Hello,%s from AutowiredFields PostConstruct!\n", list);
+        System.out.printf("Hello,%s from AutowiredFields PostConstruct!\n", context);
+        System.out.printf("Hello,%s from AutowiredFields PostConstruct!\n", collectionClassPrototypeService);
+        list.forEach(i -> System.out.printf("Hello, %s from AutowiredFields PostConstruct!\n", i));
     }
 }
 

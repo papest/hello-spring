@@ -45,5 +45,9 @@ public class AutowiredFields {
         System.out.printf("Hello,%s from AutowiredFields PostConstruct!\n", collectionClassPrototypeService);
         list.forEach(i -> System.out.printf("Hello, %s from AutowiredFields PostConstruct!\n", i));
     }
-}
 
+    @PostConstruct
+    void secondPostConstruct() {
+        System.out.println("Hello from AutowiredFields secondPostConstruct !");
+    }
+}
